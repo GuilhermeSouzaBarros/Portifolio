@@ -1,0 +1,88 @@
+@import("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap")
+
+html, body {
+    font-family: Ubuntu, arial;
+}
+
+h1 {
+    font-size: 24px;
+    color: #fff;
+    margin: none;
+    padding: none;
+}
+
+aside {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 300px;
+    overflow-y: auto;
+    background-color: #191919;
+    border-right: 2px solid grey;
+    text-align: center;
+    transition: all ease-in-out 0.5s;
+}
+
+div {
+    display: flex;
+    width: 100%;
+}
+
+#sociais {
+    display: flex;
+    font-size: 2rem;
+    background: #191919;
+    color: lightgreen;
+    padding: 0.75rem;
+    margin: auto;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+#sociais:hover {
+    color: #000;
+    background: white;
+}
+
+img {
+    width: 120px;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+nav {
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.nav-link {
+    display: flex;
+    text-align: left;
+    font-size: 1.5rem;
+    color: gray;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link:focus{
+    color: gray;
+    transition: 0.3s;
+}
+
+.nav-link i {
+    font-size: 2.25rem;
+    margin-right: 0.8rem;
+}
+
+nav li:hover > .nav-link i {
+    color: lightgreen;
+}
