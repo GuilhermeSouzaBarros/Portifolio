@@ -4,35 +4,69 @@ html, body {
     font-family: Ubuntu, arial;
 }
 
+i.menu-mobile {
+    position: fixed;
+    color: white;
+    background-color: #191940;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid #198080;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
-    font-size: 24px;
+    font-size: 175%;
     color: #fff;
     margin: none;
     padding: none;
 }
 
-aside {
+aside.menu-nav {
     position: fixed;
     top: 0px;
     left: 0px;
     bottom: 0px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
-    background-color: #191919;
-    border-right: 2px solid grey;
+    background-color: #191940;
+    border-right: 2px solid black;
     text-align: center;
     transition: all ease-in-out 0.5s;
+    z-index: 10;
 }
 
-div {
+aside.menu-nav-active {
+    overflow: hidden;
+}
+
+aside.menu-nav-active #header {
+    left: 0;
+}
+
+.profile {
+    box-sizing: border-box;
+    height: 38%;
+}
+
+.social-links {
     display: flex;
-    width: 100%;
 }
 
-.sociais {
+.social-links a {
+    box-sizing: border-box;
     display: flex;
     font-size: 2rem;
-    background: #191919;
+    background: #191940;
     color: lightgreen;
     padding: 0.6rem;
     margin: auto;
@@ -42,50 +76,73 @@ div {
     text-align: center;
 }
 
+.social-links a:hover {
+    background: white;
+}
+
 #github:hover {
     color: #000;
-    background: #ddd;
 }
 
 #youtube:hover {
     color: #f00;
-    background: #ddd;
 }
 
 #twitter:hover {
     color: #0af;
-    background: #ddd;
 }
 
 #twitch:hover {
     color: #a0f;
-    background: #ddd;
 }
 
 img {
-    width: 120px;
+    width: 50%;
     border: 3px solid black;
     border-radius: 100px;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
-nav {
-    margin-top: 12px;
+#navbar {
+    box-sizing: border-box;
+    height: 61%;
+    width: 283px;
     margin-left: 15px;
+    margin-top: 30px;
+}
+
+.menu-nav-active {
+    overflow: hidden;
+}
+
+.menu-nav-active aside.menu-nav {
+    left: 0;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    height: 15%;
+    margin: 0.833%;
 }
 
 .nav-link {
     display: flex;
+    height: 100%;
     text-align: left;
-    font-size: 1.5rem;
-    color: gray;
+    font-size: 175%;
+    color: lightgray;
     transition: 0.3s;
     text-decoration: none;
 }
 
 .nav-link:hover {
-    color: gray;
+    color: lightgray;
 }
 
 .nav-link:hover > .textlink {
@@ -93,13 +150,13 @@ nav {
 }
 
 .nav-link:focus{
-    color: gray;
+    color: lightgray;
     transition: 0.3s;
 }
 
 .nav-link i {
-    font-size: 2.25rem;
-    margin-right: 0.8rem;
+    font-size: 165%;
+    margin-right: 8%;
 }
 
 .nav li:hover > .nav-link i {
@@ -155,4 +212,23 @@ section#cont #col2 i {
     color: white;
     padding-right: 2px;
     font-size: 2rem;
+}
+
+@media(max-width: 1024px) {
+    aside.menu-nav {
+        left: -300px;
+    }
+    i.menu-mobile {
+        display: flex;
+    }
+    section#inicio h2 {
+        font-size: 3.5rem;
+    }
+    section#cont div#col1 span {
+        margin-right: 0;
+        font-size: 1rem;
+    }
+    main {
+        margin-left: 0;
+    }
 }
