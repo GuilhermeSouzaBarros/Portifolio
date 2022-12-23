@@ -37,16 +37,12 @@ aside.menu-nav {
     width: 300px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: hidden;
     background-color: #191940;
     border-right: 2px solid black;
     text-align: center;
     transition: all ease-in-out 0.5s;
     z-index: 10;
-}
-
-aside.menu-nav-active {
-    overflow: hidden;
 }
 
 aside.menu-nav-active #header {
@@ -65,7 +61,7 @@ aside.menu-nav-active #header {
 .social-links a {
     box-sizing: border-box;
     display: flex;
-    font-size: 2rem;
+    font-size: 175%;
     background: #191940;
     color: lightgreen;
     padding: 0.6rem;
@@ -96,7 +92,7 @@ aside.menu-nav-active #header {
     color: #a0f;
 }
 
-img {
+section.profile img {
     width: 50%;
     border: 3px solid black;
     border-radius: 100px;
@@ -108,12 +104,8 @@ img {
     box-sizing: border-box;
     height: 61%;
     width: 283px;
-    margin-left: 15px;
-    margin-top: 30px;
-}
-
-.menu-nav-active {
-    overflow: hidden;
+    margin-left: 5%;
+    margin-top: 20%;
 }
 
 .menu-nav-active aside.menu-nav {
@@ -127,7 +119,7 @@ img {
 }
 
 .nav-item {
-    height: 15%;
+    height: 12.5%;
     margin: 0.833%;
 }
 
@@ -135,7 +127,7 @@ img {
     display: flex;
     height: 100%;
     text-align: left;
-    font-size: 175%;
+    font-size: 150%;
     color: lightgray;
     transition: 0.3s;
     text-decoration: none;
@@ -214,6 +206,10 @@ section#cont #col2 i {
     font-size: 2rem;
 }
 
+section.section-bg {
+    background-color: #eff5ff;
+}
+
 @media(max-width: 1024px) {
     aside.menu-nav {
         left: -300px;
@@ -231,4 +227,18 @@ section#cont #col2 i {
     main {
         margin-left: 0;
     }
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #00000050;
+    background-color: #191940;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
 }
